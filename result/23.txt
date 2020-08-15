@@ -1,0 +1,65 @@
+2019-12-27 17:39:09.539792: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2019-12-27 17:39:10.458391: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.545
+pciBusID: 0000:82:00.0
+2019-12-27 17:39:10.458713: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-12-27 17:39:10.460757: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2019-12-27 17:39:10.462401: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2019-12-27 17:39:10.462768: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2019-12-27 17:39:10.465091: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2019-12-27 17:39:10.466850: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2019-12-27 17:39:10.472809: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-12-27 17:39:10.477423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+Check the Deep learning Environment:
+GPU count:1, Memory growth:True, Soft device placement:True ...
+2019-12-27 17:39:10.524128: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-12-27 17:39:10.556109: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500015000 Hz
+2019-12-27 17:39:10.559083: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5617631c02d0 executing computations on platform Host. Devices:
+2019-12-27 17:39:10.559114: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2019-12-27 17:39:10.693449: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5617630d4320 executing computations on platform CUDA. Devices:
+2019-12-27 17:39:10.693489: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-12-27 17:39:10.695563: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.545
+pciBusID: 0000:82:00.0
+2019-12-27 17:39:10.695622: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-12-27 17:39:10.695644: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2019-12-27 17:39:10.695661: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2019-12-27 17:39:10.695679: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2019-12-27 17:39:10.695697: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2019-12-27 17:39:10.695714: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2019-12-27 17:39:10.695733: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-12-27 17:39:10.700307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2019-12-27 17:39:10.700363: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-12-27 17:39:10.703619: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-27 17:39:10.703651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2019-12-27 17:39:10.703662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2019-12-27 17:39:10.708371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10312 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:82:00.0, compute capability: 7.5)
+Model: "dan_q"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv1d (Conv1D)              multiple                  33600     
+_________________________________________________________________
+max_pooling1d (MaxPooling1D) multiple                  0         
+_________________________________________________________________
+dropout (Dropout)            multiple                  0         
+_________________________________________________________________
+bidirectional (Bidirectional multiple                  1640960   
+_________________________________________________________________
+dropout_1 (Dropout)          multiple                  0         
+_________________________________________________________________
+flatten (Flatten)            multiple                  0         
+_________________________________________________________________
+dense (Dense)                multiple                  44400925  
+_________________________________________________________________
+dense_1 (Dense)              multiple                  850994    
+=================================================================
+Total params: 46,926,479
+Trainable params: 46,926,479
+Non-trainable params: 0
+_________________________________________________________________
+Restored from ./result/config_23/0/checkpoints/ckpt-10
+2019-12-27 17:39:16.194716: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-12-27 17:39:17.647646: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+(227512, 919)
+AVG-AUROC:0.93160, AVG-AUPR:0.34962.

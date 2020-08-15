@@ -1,0 +1,40 @@
+{
+    "name": "config_0",
+    "seed": 6666,
+    "model": {
+        "type": "DeepAtt",
+        "args": {}
+    },
+    "loss": {
+        "type": "NLL",
+        "args": {}
+    },
+    "lr_scheduler": {
+        "type": null,
+        "args": {}
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "learning_rate": 0.001,
+            "amsgrad": true
+        }
+    },
+    "loader": {
+        "type": "SequenceLoader",
+        "args": {
+            "batch_size": 64,
+            "shuffle": true,
+            "num_workers": null
+        }
+    },
+    "trainer": {
+        "type": "EarlyStopTrainer",
+        "args": {
+            "epochs": 100,
+            "patience": 5,
+            "verbosity": 0,
+            "tensorboard": true
+        }
+    }
+}

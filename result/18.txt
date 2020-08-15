@@ -1,0 +1,109 @@
+2019-12-27 17:27:08.578032: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2019-12-27 17:27:09.555544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.545
+pciBusID: 0000:81:00.0
+2019-12-27 17:27:09.556074: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-12-27 17:27:09.558813: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2019-12-27 17:27:09.560968: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2019-12-27 17:27:09.561500: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2019-12-27 17:27:09.564556: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2019-12-27 17:27:09.565876: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2019-12-27 17:27:09.570246: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-12-27 17:27:09.583991: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+Check the Deep learning Environment:
+GPU count:1, Memory growth:True, Soft device placement:True ...
+2019-12-27 17:27:09.608149: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-12-27 17:27:09.629214: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500015000 Hz
+2019-12-27 17:27:09.635550: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55a6008fb270 executing computations on platform Host. Devices:
+2019-12-27 17:27:09.635585: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2019-12-27 17:27:10.139218: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55a6008c30e0 executing computations on platform CUDA. Devices:
+2019-12-27 17:27:10.139280: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce RTX 2080 Ti, Compute Capability 7.5
+2019-12-27 17:27:10.141169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce RTX 2080 Ti major: 7 minor: 5 memoryClockRate(GHz): 1.545
+pciBusID: 0000:81:00.0
+2019-12-27 17:27:10.141268: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-12-27 17:27:10.141313: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2019-12-27 17:27:10.141351: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2019-12-27 17:27:10.141389: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2019-12-27 17:27:10.141426: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2019-12-27 17:27:10.141464: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2019-12-27 17:27:10.141503: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-12-27 17:27:10.144610: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2019-12-27 17:27:10.144702: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-12-27 17:27:10.147886: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-27 17:27:10.147969: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2019-12-27 17:27:10.147990: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2019-12-27 17:27:10.151037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1801 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2080 Ti, pci bus id: 0000:81:00.0, compute capability: 7.5)
+Model: "deep_sea"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv1d (Conv1D)              multiple                  10560     
+_________________________________________________________________
+max_pooling1d (MaxPooling1D) multiple                  0         
+_________________________________________________________________
+dropout (Dropout)            multiple                  0         
+_________________________________________________________________
+conv1d_1 (Conv1D)            multiple                  1229280   
+_________________________________________________________________
+max_pooling1d_1 (MaxPooling1 multiple                  0         
+_________________________________________________________________
+dropout_1 (Dropout)          multiple                  0         
+_________________________________________________________________
+conv1d_2 (Conv1D)            multiple                  3687360   
+_________________________________________________________________
+dropout_2 (Dropout)          multiple                  0         
+_________________________________________________________________
+flatten (Flatten)            multiple                  0         
+_________________________________________________________________
+dense (Dense)                multiple                  55944925  
+_________________________________________________________________
+dense_1 (Dense)              multiple                  850994    
+=================================================================
+Total params: 61,723,119
+Trainable params: 61,723,119
+Non-trainable params: 0
+_________________________________________________________________
+Restored from ./result/config_18/0/checkpoints/ckpt-3
+2019-12-27 17:27:35.305591: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-12-27 17:27:35.723502: E tensorflow/stream_executor/cuda/cuda_dnn.cc:329] Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+2019-12-27 17:27:35.767797: E tensorflow/stream_executor/cuda/cuda_dnn.cc:329] Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+Traceback (most recent call last):
+  File "main.py", line 52, in <module>
+    test(configer = configer)
+  File "main.py", line 23, in test
+    test_steps=loader.test_steps)
+  File "/home/lijiawei/bioinfor_deepatt_tf/utils/trainer.py", line 148, in test
+    predictions = self.model(batch_x, training=False)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/base_layer.py", line 891, in __call__
+    outputs = self.call(cast_inputs, *args, **kwargs)
+  File "/home/lijiawei/bioinfor_deepatt_tf/model/model.py", line 256, in call
+    temp = self.conv_1(inputs)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/base_layer.py", line 891, in __call__
+    outputs = self.call(cast_inputs, *args, **kwargs)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/keras/layers/convolutional.py", line 387, in call
+    return super(Conv1D, self).call(inputs)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/keras/layers/convolutional.py", line 197, in call
+    outputs = self._convolution_op(inputs, self.kernel)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_ops.py", line 1134, in __call__
+    return self.conv_op(inp, filter)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_ops.py", line 639, in __call__
+    return self.call(inp, filter)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_ops.py", line 238, in __call__
+    name=self.name)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_ops.py", line 227, in _conv1d
+    name=name)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/util/deprecation.py", line 574, in new_func
+    return func(*args, **kwargs)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/util/deprecation.py", line 574, in new_func
+    return func(*args, **kwargs)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_ops.py", line 1681, in conv1d
+    name=name)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/ops/gen_nn_ops.py", line 1031, in conv2d
+    data_format=data_format, dilations=dilations, name=name, ctx=_ctx)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/ops/gen_nn_ops.py", line 1130, in conv2d_eager_fallback
+    ctx=_ctx, name=name)
+  File "/home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/eager/execute.py", line 67, in quick_execute
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.UnknownError: Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above. [Op:Conv2D] name: deep_sea/conv1d/conv1d/
