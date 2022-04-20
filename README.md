@@ -46,6 +46,7 @@ eliminates all unnecessary features for specific connections
   year={2020},
 }
 ```
+My Manuscript: [[PDF]](https://www.ljwstruggle.com/mynote/docs/DeepATT.pdf)
 
 My Homepage: [https://www.ljwstruggle.com/](<https://www.ljwstruggle.com/>)
 
@@ -93,7 +94,8 @@ You need to first download the training, validation, and testing sets from DeepS
 contents of the tar.gz file, move the 3 .mat files into the **`./data/`** folder.
 
 ### Model File
-You can download the config_7 and config_15 models in **`ftp://www.lbci.cn/model.zip`**
+<!-- You can download the config_7 and config_15 models in **`ftp://www.lbci.cn/model.zip`** -->
+None
 
 ### Preprocess
 Because of my RAM limited, I firstly transform the train.mat file to .tfrecord files.
